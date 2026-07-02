@@ -27,7 +27,6 @@
         <li><a href="#despre"     class="nav-link">Despre</a></li>
         <li><a href="#servicii"   class="nav-link">Servicii</a></li>
         <li><a href="#spete"      class="nav-link">Articole</a></li>
-        <li><a href="#programare" class="nav-link">Programare</a></li>
         <li><a href="#contact"    class="nav-link">Contact</a></li>
       </ul>
     </div>
@@ -45,7 +44,7 @@
         Abordez fiecare caz cu rigoarea, calmul și discernământul pe care le oferă o lungă experiență teoretică și practică. Îmi asum apărarea intereselor clienților mei prin transparență totală și strategii juridice solide.
       </p>
       <div class="hero-actions">
-        <a href="#programare" class="btn btn-primary">
+        <a href="#contact" class="btn btn-primary">
           <i class="fas fa-calendar-check"></i> Programare Consultație
         </a>
         <a href="#despre" class="btn btn-ghost">Profilul Avocatului</a>
@@ -217,137 +216,6 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
         <p>Urmează să fie publicate în curând.</p>
       </div>
 
-      <div class="spete-cta">
-        <button class="btn btn-ghost" id="incarcaMaiMulte">
-          <i class="fas fa-layer-group"></i> Încarcă Mai Multe
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modal Speță -->
-  <div class="modal-overlay" id="spetaModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal">
-      <button class="modal-close" id="modalClose" aria-label="Închide"><i class="fas fa-times"></i></button>
-      <span class="modal-badge-el"></span>
-      <h2 class="modal-title" id="modalTitle"></h2>
-      <p class="modal-meta"></p>
-      <div class="modal-body"></div>
-      <div class="modal-result-el"></div>
-    </div>
-  </div>
-
-  <!-- ===================== PROGRAMARE ===================== -->
-  <section id="programare" class="section programare">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">Programare Online</div>
-        <h2 class="section-title">Programați o <em>Consultație</em></h2>
-        <p class="section-subtitle">
-          Selectați data și ora dorită. Prima consultație durează 50 de minute și se desfășoară online. Toate informațiile furnizate sunt strict confidențiale.
-        </p>
-      </div>
-
-      <div class="programare-layout">
-
-        <!-- Calendar + ore -->
-        <div class="calendar-col">
-
-          <div class="calendar">
-            <div class="calendar-header">
-              <button class="cal-nav" id="calPrev" aria-label="Luna anterioară">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <h3 class="cal-month-year" id="calMonthYear"></h3>
-              <button class="cal-nav" id="calNext" aria-label="Luna următoare">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
-            <div class="calendar-weekdays">
-              <span>Lun</span><span>Mar</span><span>Mie</span>
-              <span>Joi</span><span>Vin</span>
-              <span class="wd-weekend">Sâm</span><span class="wd-weekend">Dum</span>
-            </div>
-            <div class="calendar-days" id="calDays"></div>
-            <div class="calendar-legend">
-              <span class="legend-item"><span class="legend-dot ld-avail"></span>Disponibil</span>
-              <span class="legend-item"><span class="legend-dot ld-partial"></span>Parțial ocupat</span>
-              <span class="legend-item"><span class="legend-dot ld-sel"></span>Selectat</span>
-            </div>
-          </div>
-
-          <div class="timeslots-wrapper" id="timeslotsWrapper">
-            <h4 class="timeslots-title">
-              <i class="fas fa-clock"></i> Ore disponibile &mdash;
-              <span id="selectedDateLabel"></span>
-            </h4>
-            <div class="timeslots" id="timeslots"></div>
-          </div>
-
-        </div>
-
-        <!-- Formular rezervare -->
-        <div class="booking-form-wrapper" id="bookingFormWrapper">
-          <h3 class="booking-form-title">Detalii Programare</h3>
-          <div class="booking-summary" id="bookingSummary"></div>
-
-          <form class="booking-form" id="bookingForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="bookNume">Nume *</label>
-                <input type="text" id="bookNume" name="nume" placeholder="Numele dvs." required>
-              </div>
-              <div class="form-group">
-                <label for="bookPrenume">Prenume *</label>
-                <input type="text" id="bookPrenume" name="prenume" placeholder="Prenumele dvs." required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="bookTelefon">Telefon *</label>
-                <input type="tel" id="bookTelefon" name="telefon" placeholder="07XX XXX XXX" required>
-              </div>
-              <div class="form-group">
-                <label for="bookEmail">Email *</label>
-                <input type="email" id="bookEmail" name="email" placeholder="email@exemplu.ro" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="bookTip">Tipul Problemei Juridice *</label>
-              <select id="bookTip" name="tip_problema" required>
-                <option value="">— Selectați domeniul —</option>
-                <option value="penal">Drept Penal</option>
-                <option value="procesual">Drept Procesual Penal</option>
-                <option value="contraventional">Drept Contravențional</option>
-                <option value="altele">Altă problemă juridică</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="bookDescriere">Descrierea Situației <span class="optional">(opțional)</span></label>
-              <textarea id="bookDescriere" name="descriere" rows="4" placeholder="Descrieți pe scurt situația pentru care solicitați consultanță. Informațiile sunt confidențiale."></textarea>
-            </div>
-            <div class="form-group form-checkbox">
-              <input type="checkbox" id="bookGDPR" name="gdpr" required>
-              <label for="bookGDPR">
-                Am citit și sunt de acord cu <a href="politica-confidentialitate.html" class="link-gold" target="_blank">Politica de Confidențialitate</a> și cu prelucrarea datelor cu caracter personal în scopul gestionării programării. *
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <i class="fas fa-calendar-check"></i> Confirmați Programarea
-            </button>
-          </form>
-
-          <div class="booking-success" id="bookingSuccess">
-            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-            <h3>Programare Înregistrată!</h3>
-            <p>Vă mulțumim! Veți fi contactat telefonic sau pe email în cel mai scurt timp pentru confirmarea programării.</p>
-            <button class="btn btn-ghost" id="noaProgramare">
-              <i class="fas fa-plus"></i> Programare Nouă
-            </button>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
@@ -355,10 +223,10 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
   <section id="contact" class="section contact">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Contact</div>
+        <div class="section-label">Contact &amp; Programare</div>
         <h2 class="section-title">Luați <em>Legătura</em></h2>
         <p class="section-subtitle">
-          Nu ezitați să mă contactați pentru orice întrebare sau pentru a solicita informații despre serviciile oferite.
+          Completați formularul de mai jos pentru a solicita o consultație sau pentru orice întrebare. Vă voi contacta în cel mai scurt timp pentru a stabili detaliile.
         </p>
       </div>
 
@@ -376,15 +244,15 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div>
               <strong>Telefon</strong>
-              <p><a href="tel:+40XXXXXXXXX">+40 722 438 979</a></p>
+              <p><a href="tel:+40722438979">+40 722 438 979</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div>
               <strong>Email</strong>
-              <p><a href="mailto:contact@exemplu.ro">av.corlateanusorin@gmail.com</a></p>
-              <p><a href="mailto:contact@exemplu.ro">sorin_cps@yahoo.com</a></p>
+              <p><a href="mailto:av.corlateanusorin@gmail.com">av.corlateanusorin@gmail.com</a></p>
+              <p><a href="mailto:sorin_cps@yahoo.com">sorin_cps@yahoo.com</a></p>
             </div>
           </div>
           <div class="contact-item">
@@ -400,11 +268,17 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
           </div>
         </div>
 
+        <div data-fs-success class="contact-success" style="display:none">
+          <i class="fas fa-check-circle"></i> Mesajul a fost trimis. Vă vom contacta în cel mai scurt timp.
+        </div>
+        <div data-fs-error class="contact-error" style="display:none"></div>
+
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label for="contactNume">Nume *</label>
-              <input type="text" id="contactNume" name="nume" placeholder="Numele dvs." required>
+              <input type="text" id="contactNume" name="nume" placeholder="Numele dvs." required data-fs-field>
+              <span data-fs-error="nume" class="fs-field-error"></span>
             </div>
             <div class="form-group">
               <label for="contactTelefon">Telefon</label>
@@ -413,7 +287,18 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
           </div>
           <div class="form-group">
             <label for="contactEmail">Email *</label>
-            <input type="email" id="contactEmail" name="email" placeholder="email@exemplu.ro" required>
+            <input type="email" id="contactEmail" name="email" placeholder="email@exemplu.ro" required data-fs-field>
+            <span data-fs-error="email" class="fs-field-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactTip">Domeniu juridic</label>
+            <select id="contactTip" name="tip_problema">
+              <option value="">— Selectați domeniul —</option>
+              <option value="penal">Drept Penal</option>
+              <option value="procesual">Drept Procesual Penal</option>
+              <option value="contraventional">Drept Contravențional</option>
+              <option value="altele">Altă problemă juridică</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="contactSubiect">Subiect</label>
@@ -421,7 +306,8 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
           </div>
           <div class="form-group">
             <label for="contactMesaj">Mesaj *</label>
-            <textarea id="contactMesaj" name="mesaj" rows="5" placeholder="Scrieți mesajul dvs. aici..." required></textarea>
+            <textarea id="contactMesaj" name="mesaj" rows="5" placeholder="Scrieți mesajul dvs. aici..." required data-fs-field></textarea>
+            <span data-fs-error="mesaj" class="fs-field-error"></span>
           </div>
           <div class="form-group form-checkbox">
             <input type="checkbox" id="contactGDPR" name="gdpr" required>
@@ -429,12 +315,9 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
               Sunt de acord cu <a href="politica-confidentialitate.html" class="link-gold" target="_blank">Politica de Confidențialitate</a> și prelucrarea datelor cu caracter personal. *
             </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">
+          <button type="submit" class="btn btn-primary btn-full" data-fs-submit-btn>
             <i class="fas fa-paper-plane"></i> Trimite Mesajul
           </button>
-          <div class="contact-success" id="contactSuccess">
-            <i class="fas fa-check-circle"></i> Mesajul a fost trimis. Vă vom contacta în cel mai scurt timp.
-          </div>
         </form>
 
       </div>
@@ -510,5 +393,10 @@ Mi-am consolidat o carieră de 25 de ani în domeniul dreptului penal, acumulân
   </div>
 
   <script src="js/main.js"></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contactForm', formId: 'mojopqre' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
