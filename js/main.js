@@ -62,6 +62,23 @@ const io = new IntersectionObserver((entries) => {
 animTargets.forEach(el => io.observe(el));
 
 // ============================================================
+// GDPR CHECKBOX — Formspree Ajax nu validează required pe checkbox
+// ============================================================
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  const gdpr = document.getElementById('contactGDPR');
+  if (!gdpr.checked) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    gdpr.closest('.form-group').querySelector('label').style.color = '#c0392b';
+    gdpr.focus();
+  }
+}, true);
+
+document.getElementById('contactGDPR').addEventListener('change', function () {
+  this.closest('.form-group').querySelector('label').style.color = '';
+});
+
+// ============================================================
 // COOKIE CONSENT
 // ============================================================
 (function () {
