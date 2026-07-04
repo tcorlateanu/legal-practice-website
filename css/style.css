@@ -350,6 +350,14 @@ input, textarea, select { font-family: inherit; }
   align-items: start;
 }
 .despre-image-col { position: relative; }
+.despre-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--r-lg);
+  display: block;
+}
 .image-placeholder {
   width: 100%;
   aspect-ratio: 3 / 4;
