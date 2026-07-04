@@ -62,6 +62,27 @@ const io = new IntersectionObserver((entries) => {
 animTargets.forEach(el => io.observe(el));
 
 // ============================================================
+// ARTICOLE — afișează primele 3, restul la "Încarcă mai multe"
+// ============================================================
+(function () {
+  const grid = document.getElementById('speteGrid');
+  const cta  = document.getElementById('speteCta');
+  const btn  = document.getElementById('incarcaMaiMulte');
+  if (!grid || !cta || !btn) return;
+
+  const cards = Array.from(grid.querySelectorAll('.speta-card'));
+  if (cards.length > 3) {
+    cards.slice(3).forEach(c => c.style.display = 'none');
+    cta.style.display = 'block';
+  }
+
+  btn.addEventListener('click', function () {
+    cards.forEach(c => c.style.display = '');
+    cta.style.display = 'none';
+  });
+})();
+
+// ============================================================
 // GDPR CHECKBOX — Formspree Ajax nu validează required pe checkbox
 // ============================================================
 document.getElementById('contactForm').addEventListener('submit', function (e) {

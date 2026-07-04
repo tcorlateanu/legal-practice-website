@@ -598,6 +598,8 @@ input, textarea, select { font-family: inherit; }
 .speta-badge.penal           { background: #fff0f0; color: #b83232; }
 .speta-badge.procesual       { background: #eff4ff; color: #3b6fcb; }
 .speta-badge.contraventional { background: #fff8ee; color: #9a5010; }
+.speta-badge.publicatie      { background: var(--gold-alpha); color: var(--gold-mid); }
+.speta-author { font-size: 0.8rem; color: var(--text-3); margin: 10px 0 0; display: flex; align-items: center; gap: 6px; }
 
 .speta-date { font-size: 0.74rem; color: var(--text-3); flex-shrink: 0; }
 .speta-title { font-family: var(--serif); font-size: 1rem; color: var(--text-1); line-height: 1.44; }
