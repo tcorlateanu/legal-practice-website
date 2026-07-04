@@ -878,6 +878,9 @@ input, textarea, select { font-family: inherit; }
 .contact-item a:hover { color: var(--gold-mid); }
 .contact-item:hover .contact-icon i { transform: scale(1.3); }
 .contact-icon i { transition: transform 0.2s ease; }
+.contact-icon i.icon-active { transform: scale(1.4); }
+.contact-trigger { font-weight: 600; color: var(--gold-mid); cursor: default; transition: color var(--ease); }
+.contact-trigger:hover { color: var(--gold-light); }
 .contact-social { display: flex; gap: 10px; padding-top: 2px; }
 .social-link {
   width: 38px; height: 38px;

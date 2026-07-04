@@ -62,6 +62,21 @@ const io = new IntersectionObserver((entries) => {
 animTargets.forEach(el => io.observe(el));
 
 // ============================================================
+// HOVER TRIGGER — text "telefon"/"email" animează iconița din stânga
+// ============================================================
+(function () {
+  function bindTrigger(triggerId, itemId) {
+    const trigger = document.getElementById(triggerId);
+    const icon = document.querySelector('#' + itemId + ' .contact-icon i');
+    if (!trigger || !icon) return;
+    trigger.addEventListener('mouseenter', () => icon.classList.add('icon-active'));
+    trigger.addEventListener('mouseleave', () => icon.classList.remove('icon-active'));
+  }
+  bindTrigger('triggerTelefon', 'contactItemTelefon');
+  bindTrigger('triggerEmail',   'contactItemEmail');
+})();
+
+// ============================================================
 // ARTICOLE — afișează primele 3, restul la "Încarcă mai multe"
 // ============================================================
 (function () {
