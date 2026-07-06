@@ -77,7 +77,7 @@ animTargets.forEach(el => io.observe(el));
 })();
 
 // ============================================================
-// ARTICOLE — afișează primele 3, restul la "Încarcă mai multe"
+// ARTICOLE — afișează primele 6, restul la "Încarcă mai multe"
 // ============================================================
 (function () {
   const grid = document.getElementById('speteGrid');
@@ -86,8 +86,8 @@ animTargets.forEach(el => io.observe(el));
   if (!grid || !cta || !btn) return;
 
   const cards = Array.from(grid.querySelectorAll('.speta-card'));
-  if (cards.length > 3) {
-    cards.slice(3).forEach(c => c.style.display = 'none');
+  if (cards.length > 6) {
+    cards.slice(6).forEach(c => c.style.display = 'none');
     cta.style.display = 'block';
   }
 
