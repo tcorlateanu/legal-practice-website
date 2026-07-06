@@ -91,9 +91,17 @@ animTargets.forEach(el => io.observe(el));
     cta.style.display = 'block';
   }
 
+  let expanded = false;
   btn.addEventListener('click', function () {
-    cards.forEach(c => c.style.display = '');
-    cta.style.display = 'none';
+    expanded = !expanded;
+    if (expanded) {
+      cards.forEach(c => c.style.display = '');
+      btn.innerHTML = '<i class="fas fa-layer-group"></i> Arată mai puține';
+    } else {
+      cards.slice(6).forEach(c => c.style.display = 'none');
+      btn.innerHTML = '<i class="fas fa-layer-group"></i> Încarcă Mai Multe';
+      document.getElementById('spete').scrollIntoView({ behavior: 'smooth' });
+    }
   });
 })();
 
